@@ -169,4 +169,5 @@ on a widly used dimentionality reduction method in `Lab 1`, the Principal
 Component Analysis. There are other means of projecting data. Look at
 scikit-learn's documentation to see possible options.
 
-We will discuss in `Lab 5` the combinaison of dimentionality reduction and a predictor.
+We will discuss in `Lab 5` the combinaison of dimentionality reduction and a
+predictor.
