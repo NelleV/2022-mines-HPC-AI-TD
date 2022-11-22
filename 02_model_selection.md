@@ -101,8 +101,15 @@ StratifiedKFold.
 Comment.
 
 ## Training and testing error as a function of the number of samples
+
 - Now, we are going to look at how the training and testing error vary based
   on the number of samples in the data.
+
+  We are going to use a second set of protein data. It's slightly too big to
+  be committed onto github, so download the zip file from
+  http://membres-timc.imag.fr/Nelle.Varoquaux/teaching/ and unzip it. It
+  contains all the datasets, including a dataset called
+  `data/protein_dataset_2`.
 
   Load the data in `data/protein_dataset_2`. The structure of this folder is
   strictly identical to `data/protein_dataset`. Load the data.
