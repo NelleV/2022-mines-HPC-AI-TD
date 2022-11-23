@@ -68,7 +68,7 @@ and fit a linear model.
   tip:
 
   ```python
-  import seaboarn as sns
+  import seaborn as sns
   sns.jointplot(X[:, 0], X[:, 1])
   ```
 
