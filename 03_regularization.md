@@ -1,27 +1,36 @@
 We are now going to investigate regularized models. We are going to use the
-same data as before (`data/protein_dataset`). The core difference is that
-instead of working on the features extracted from the protein sequences, we
-are now going to use a much larger set of features.
+same data as before (`data/protein_dataset`) (the small dataset). The core
+difference is that instead of working on the features extracted from the
+protein sequences, we are now going to use a much larger set of features.
 
 
 # Data loading
 
 - Load the features and labels. What is the size of the data?
 
+```python
+
+import pandas as pd
+
+features = pd.read_csv("data/protein_dataset/features.csv", index_col=0)
+labels = pd.read_csv("data/protein_dataset/labels.csv", index_col=0)
+```
+
 - Split the data in a train set containing 70% of the data and a test set
-  containing the remaining 30%. We use `model_selection.train_test_split` 
+  containing the remaining 30%. We use scikit-learn's
+  `model_selection.train_test_split`. For this.
 
 - Scale the data using a standard scaler (`preprocessing.StandardScaler`).
   Estimate the scaler on the train data (using `fit` / `fit_transform`), and
-  apply the scaling on the test data (using `transform`).
-  Why?
+  apply the scaling on the test data (using `transform`). Keep both scaled and
+  unscaled data at hand for tests.
 
 # Logistic regression, not regularized
 
 - Let us train a logistic regression *without regularization* on our
-  *unscaled* train
-  set, and evaluate it on the test set using `metrics.balanced_accuracy_score`
-- Repeat on the *scaled* training data,. What do you observe in terms of
+  *unscaled* train set, and evaluate it on the test set using
+  `metrics.balanced_accuracy_score`
+- Repeat on *scaled* training data. What do you observe in terms of
   performance?
 - Plot the ROC curves.
 
